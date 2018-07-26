@@ -1,5 +1,5 @@
 body {
-  background: salmon;
+  background: lightsalmon;
   font-family: system-ui, sans-serif;
   font-size: 20px;
   margin: 2em;
@@ -16,14 +16,31 @@ nav {
 
 nav a {
   padding: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 nav a.active {
   background: white;
 }
 
+nav a:hover {
+
+}
+
+nav a.active:hover {
+
+}
+
+nav a.active:active {
+
+}
+
+
 .cardgroup {
   display: flex;
+  flex-direction: column;
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -41,4 +58,34 @@ nav a.active {
 .card:hover {
   box-shadow: 0 3px 0 6px rgba(0, 0, 0, 1);
   transform: scale(1.05);
+}
+
+@media (min-width: 500px) {
+
+  body {
+    background: lightyellow;
+  }
+
+}
+
+@media (min-width: 820px) {
+
+  body {
+    background: lightblue;
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    margin-right: 40px;
+  }
+
+  nav a {
+    padding: 20px 40px;
+  }
+
+  .cardgroup {
+    flex-direction: row;
+  }
+
 }
